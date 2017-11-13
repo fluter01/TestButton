@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TestButton"
+             x:Class="TestButton.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="DefaultButtonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="DodgerBlue"></Setter>
+                <Setter Property="BackgroundColor" Value="Transparent"></Setter>
+            </Style>
+            <Style x:Key="RoundBorderButtonStyle" TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
+                <Setter Property="BorderWidth" Value="1"></Setter>
+                <Setter Property="BorderRadius" Value="30"></Setter>
+                <Setter Property="BorderColor" Value="DodgerBlue"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="Center" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button Style="{StaticResource RoundBorderButtonStyle}" Text="Hello"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
